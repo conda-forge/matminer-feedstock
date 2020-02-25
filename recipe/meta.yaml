@@ -45,6 +45,8 @@ requirements:
 test:
   imports:
     - matminer
+  commands:
+    - pip check
 
 about:
   home: https://hackingmaterials.lbl.gov/matminer/
