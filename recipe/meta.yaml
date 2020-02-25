@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.5
+    - pip
     - numpy >=1.17.2
     - requests >=2.20.0
     - pymatgen >=2019.10.2
