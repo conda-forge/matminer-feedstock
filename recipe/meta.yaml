@@ -27,7 +27,7 @@ requirements:
     - pandas >=0.23.4
     - tqdm >=4.23.1
     - pymongo >=3.6.1
-    - pint >=0.8.1
+    - pint =0.10
     - six >=1.11.0
     - plotly >=3.2.1
     - future >=0.16.0
