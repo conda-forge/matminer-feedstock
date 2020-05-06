@@ -1,5 +1,5 @@
 {% set name = "matminer" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e4f0db79cc118d171a93aafb3a6edcff3f863d1f73cbfcdedd6f10bfdb2c34f 
+  sha256: df272dc483cf17770102ae57513f258ad4e372a5d3c63d80193c7da08b047960
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >=3.5
     - pip
-    - numpy >=1.17.2
+    - numpy >=1.18.3
     - requests >=2.20.0
     - pymatgen >=2019.10.2
     - pandas >=0.23.4
@@ -54,7 +54,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'data mining for Materials Science'
+  summary: data mining for Materials Science
 
   description: |
     matminer is a library for performing data mining in the field of 
