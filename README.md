@@ -5,9 +5,13 @@ Home: https://hackingmaterials.lbl.gov/matminer/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/matminer-feedstock/blob/master/LICENSE.txt)
 
 Summary: data mining for Materials Science
+
+Development: https://github.com/hackingmaterials/matminer
+
+Documentation: https://hackingmaterials.lbl.gov/matminer/
 
 matminer is a library for performing data mining in the field of
 materials science.
