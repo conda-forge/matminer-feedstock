@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -31,7 +31,7 @@ requirements:
     - six >=1.11.0
     - plotly >=3.2.1
     - future >=0.16.0
-    - sympy >=1.1.1
+    - sympy >=1.6
     - scikit-learn >=0.21.3
     - monty >=3.0.1
     - ujson >=1.35
