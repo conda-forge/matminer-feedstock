@@ -1,5 +1,5 @@
 {% set name = "matminer" %}
-{% set version = "0.6.5" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 45118965d68dcf233100c8a0f9a5394f1bba10b7d6e28289723baeb771de6aa1
+  sha256: 6c37a363a9ed66995965a83aad111a388f7c0fb624eeace1fcf2dffd69c0a301
   patches:
     - pymatgen.patch
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
