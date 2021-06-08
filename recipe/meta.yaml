@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 6c37a363a9ed66995965a83aad111a388f7c0fb624eeace1fcf2dffd69c0a301
-  patches:
-    - pymatgen.patch
 
 build:
   noarch: python
