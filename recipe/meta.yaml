@@ -1,5 +1,5 @@
 {% set name = "matminer" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ffdb67d668597d9d0dd94005fd13f71fe40436d772aa8cedc8321e528cd35fba
+  sha256: abd76be8adb5832da90b0dd123c1e1d615b5f7d7c7fb8e3375157ff69e41b796
 
 build:
   noarch: python
