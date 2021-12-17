@@ -34,12 +34,30 @@ requirements:
     - sympy >=1.6
     - scikit-learn >=0.21.3
     - monty >=3.0.1
+  run_constrained:
+    - ujson >=1.35
+    - jmespath >=0.9.3
+    - httplib2 >=0.10.3
+    - ase >=3.14.1
+    - dscribe >=0.2.9
+    - mdf_forge >=0.6.1
+    - aflow >=0.0.9
+    - citrination-client >=4.0.1
 
 test:
   imports:
     - matminer
   commands:
     - pip check
+  requires:
+    - ujson >=1.35
+    - jmespath >=0.9.3
+    - httplib2 >=0.10.3
+    - ase >=3.14.1
+    - dscribe >=0.2.9
+    - mdf_forge >=0.6.1
+    - aflow >=0.0.9
+    - citrination-client >=4.0.1
 
 about:
   home: https://hackingmaterials.lbl.gov/matminer/
