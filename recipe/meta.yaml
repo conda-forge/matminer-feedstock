@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -34,6 +34,7 @@ requirements:
     - sympy >=1.6
     - scikit-learn >=0.21.3
     - monty >=3.0.1
+    - jsonschema >=4.2.1
   run_constrained:
     - ujson >=1.35
     - jmespath >=0.9.3
