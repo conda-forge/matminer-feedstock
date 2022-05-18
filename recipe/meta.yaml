@@ -24,7 +24,7 @@ requirements:
     - pip
     - numpy >=1.18.3
     - requests >=2.20.0
-    - pymatgen >=2019.10.2
+    - pymatgen >=2022.5.17
     - pandas >=0.23.4
     - tqdm >=4.23.1
     - pymongo >=3.11.2
