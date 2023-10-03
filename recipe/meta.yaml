@@ -6,45 +6,33 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/matminer-{{ version }}.tar.gz
   sha256: b5c338a015e1a0d4a1ca9bb229e5b07d9a8a114611b6b4b4dad73b8a6c085291
 
 build:
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - python >=3.5
-    - pip
     - numpy >=1.20.1
+    - setuptools >=43.0.0
+    - setuptools-scm
+    - pip
   run:
     - python >=3.5
-    - pip
-    - numpy >=1.18.3
-    - requests >=2.20.0
-    - pymatgen >=2022.5.17
-    - pandas >=0.23.4,<=1.5
-    - tqdm >=4.23.1
-    - pymongo >=3.11.2
-    - pint >=0.8.1
-    - six >=1.16.0
-    - plotly >=3.2.1
-    - future >=0.16.0
-    - sympy >=1.6
-    - scikit-learn >=0.21.3
-    - monty >=3.0.1
-    - jsonschema >=4.2.1
-  run_constrained:
-    - ujson >=1.35
-    - jmespath >=0.9.3
-    - httplib2 >=0.10.3
-    - ase >=3.14.1
-    - dscribe >=0.2.9
-    - mdf_forge >=0.6.1
-    - aflow >=0.0.9
-    - citrination-client >=4.0.1
+    - numpy >=1.20.1
+    - requests
+    - pandas >=1.5,<2.dev0
+    - tqdm
+    - pymongo
+    - future
+    - scikit-learn
+    - sympy
+    - monty
+    - pymatgen
 
 test:
   imports:
@@ -52,27 +40,13 @@ test:
   commands:
     - pip check
   requires:
-    - ujson >=1.35
-    - jmespath >=0.9.3
-    - httplib2 >=0.10.3
-    - ase >=3.14.1
-    - dscribe >=0.2.9
-    - mdf_forge >=0.6.1
-    - aflow >=0.0.9
-    - citrination-client >=4.0.1
+    - pip
 
 about:
-  home: https://hackingmaterials.lbl.gov/matminer/
+  home: https://github.com/hackingmaterials/matminer
+  summary: matminer is a library that contains tools for data mining in Materials Science
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
-  summary: data mining for Materials Science
-
-  description: |
-    matminer is a library for performing data mining in the field of 
-    materials science.
-  doc_url: https://hackingmaterials.lbl.gov/matminer/
-  dev_url: https://github.com/hackingmaterials/matminer
 
 extra:
   recipe-maintainers:
