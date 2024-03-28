@@ -20,7 +20,7 @@ index 042eaa5..26a1d97 100644
 -            "relative_to": __file__,
 -            "local_scheme": local_version,
 -        },
-+        version="0.9.1",
++        version="0.9.2",
          setup_requires=["setuptools_scm"],
          description="matminer is a library that contains tools for data mining in Materials Science",
          long_description=open(os.path.join(module_dir, "README.md")).read(),
