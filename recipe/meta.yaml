@@ -1,5 +1,5 @@
 {% set name = "matminer" %}
-{% set version = "0.9.2" %}
+{% set version = "0.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/matminer-{{ version }}.tar.gz
-  sha256: 1a37b3bb7f1e73f17e7dc2e46a67073402a37e9e506bc85ddc8229b807898901
+  sha256: e5f4e638434d58f8009b05d7cd402a9287ce619bdf67b417e8af78752ad7d2c2
   patches:
     - setup.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python >=3.5
-    - numpy >=1.23,<2
+    - numpy >=1.23
     - requests >=2.31,<3.dev0
     - pandas >=1.5,<3
     - tqdm >=4.66,<5.dev0
