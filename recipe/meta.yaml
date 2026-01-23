@@ -9,8 +9,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/matminer-{{ version }}.tar.gz
   sha256: abd4fb61a74ee59448396149d0a4e3c19a74b12969b372ea05234b823c9d4499
-  patches:
-    - setup.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
