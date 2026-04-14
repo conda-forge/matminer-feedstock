@@ -1,5 +1,5 @@
 {% set name = "matminer" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/matminer-{{ version }}.tar.gz
-  sha256: abd4fb61a74ee59448396149d0a4e3c19a74b12969b372ea05234b823c9d4499
+  sha256: 6f52c821d3323f586a8f6f23e7eca296cb80ce5aab9754fc0c788c27ed73b5fa
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
