@@ -43,7 +43,9 @@ tests:
       imports:
         - matminer
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: matminer is a library that contains tools for data mining in Materials Science
